@@ -1,0 +1,21 @@
+.cart {
+  min-height: 80vh;
+  .cart-title {
+    h1 {
+      font-family: "Courgette", cursive;
+      font-size: 3em;
+      text-align: center;
+    }
+  }
+  .total-amount {
+    @include flex-prop(center, space-between, row);
+    margin-top: auto;
+    padding: 0 1.5em;
+    h3 {
+      font-size: 1.25em;
+    }
+    button {
+      @include button-prop2;
+    }
+  }
+}

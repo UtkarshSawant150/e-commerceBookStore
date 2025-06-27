@@ -1,0 +1,51 @@
+.footer1 {
+  background-color: $footer-bg;
+  padding: 3rem 0;
+  color: white;
+  h3 {
+    color: white;
+    padding: 0.2rem 0;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    font-weight: 350;
+    font-size: 1.5em;
+    border-bottom: 2px solid $nav-active;
+  }
+  p {
+    font-size: 1em;
+    font-weight: 400;
+  }
+  img {
+    width: 50%;
+  }
+
+  ul {
+    padding: 0;
+    li {
+      font-size: 1em;
+      list-style-type: none;
+      padding: 0.5rem 0;
+      a {
+        color: white;
+        font-weight: 400;
+        text-decoration: none;
+      }
+    }
+  }
+  .icons a {
+    color: white;
+    font-weight: 400;
+    padding: 0 0.5rem;
+    font-size: 1em;
+  }
+}
+
+.footer2 {
+  background-color: $footer-bg;
+  color: white;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}

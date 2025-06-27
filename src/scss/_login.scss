@@ -1,0 +1,121 @@
+.login-page {
+  @include bg-image-prop("../images/background4.jpg");
+  @include flex-prop(center, center, row);
+  height: 90vh;
+  .login-box {
+    @include flex-prop(center, space-evenly, row);
+    background-color: white;
+    height: 80%;
+    width: 60%;
+    box-shadow: 2px 4px 7px 3px black;
+    border-radius: 1.5em;
+    background-color: #eff2f4;
+    .login-image {
+      width: 35%;
+      height: 100%;
+      @include flex-prop(center, center, row);
+    }
+    .login-details {
+      @include flex-prop(center, center, column);
+      background-color: white;
+      height: 90%;
+      border-radius: 0.3em;
+      width: 40%;
+      box-shadow: 2px 4px 7px 3px grey;
+      form {
+        @include flex-prop(center, center, column);
+        height: 80%;
+        width: 100%;
+        div {
+          margin: auto;
+          width: 80%;
+          label {
+            padding: 0 0.2em;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            font-size: 1.2em;
+          }
+          input {
+            width: 100%;
+            padding: 0.25em 0.5em;
+            border-radius: 0.25em;
+            letter-spacing: 0.05em;
+            font-size: 1.1em;
+            border: 2px solid black;
+          }
+        }
+        div:first-child {
+          margin: auto;
+          @include flex-prop(center, center, row);
+          width: 100%;
+          img {
+            width: 70%;
+            margin: 0 auto;
+          }
+        }
+
+        button {
+          @include button-prop2;
+          margin: auto 0;
+        }
+        p {
+          text-align: center;
+          margin: auto 0;
+          a {
+            color: black;
+            &:hover {
+              color: $nav-active;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .login-page {
+    .login-box {
+      width: 90%;
+      .login-details {
+        height: 60%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .login-page {
+    .login-box {
+      background: transparent;
+      box-shadow: none;
+      width: 90%;
+
+      @include flex-prop(center, space-evenly, column);
+      .login-image {
+        display: none;
+      }
+      .login-details {
+        height: 100%;
+        width: 90%;
+        box-shadow: 2px 4px 7px 3px black;
+        form {
+          div {
+            width: 60%;
+            input {
+              font-size: 1.4em;
+            }
+          }
+          button {
+            font-size: 1.3em;
+          }
+          p {
+            a {
+              font-size: 1.4em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

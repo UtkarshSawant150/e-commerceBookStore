@@ -1,0 +1,36 @@
+@import "variables";
+@import "mixin";
+
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@700&family=Nunito&family=Raleway:ital,wght@0,200;0,300;1,200;1,300&family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@700&family=Marck+Script&family=Merienda&family=Nunito&family=Raleway:ital,wght@0,200;0,300;1,200;1,300&family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@700&family=Marck+Script&family=Merienda&family=Nunito&family=Raleway:ital,wght@0,200;0,300;1,200;1,300&family=Work+Sans&display=swap");
+//Navbar
+@import "navbar";
+//Home
+@import "home";
+//Footer
+@import "footer";
+//Cart
+@import "cart";
+//Card
+@import "card";
+
+@import "books";
+
+@import "category-list";
+
+@import "login";
+
+@import "registration";
+
+@import "cart";
+
+@import "contact";
+
+@import "profile";
+
+@import "bookdetails";
+
+@import "books-cart";
+
+@import "order-placed";

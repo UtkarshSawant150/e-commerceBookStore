@@ -1,0 +1,56 @@
+.register-page {
+  @include bg-image-prop("../images/background5.jpg");
+  @include flex-prop(center, center, row);
+  min-height: 90vh;
+
+  form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 2px 4px 7px 3px black;
+    width: 70%;
+    height: 80%;
+    font-size: 1.2em;
+    .register-logo {
+      @include flex-prop(center, center, row);
+      margin: 0;
+      img {
+        height: 4.5em;
+      }
+    }
+    input {
+      border: 2px solid black;
+    }
+    button {
+      @include button-prop2;
+    }
+    .gender {
+      @include flex-prop(center, flex-start, row);
+      p {
+        padding: 0 1.5em 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .register-page {
+    form {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .register-logo {
+    img {
+      width: 10em;
+    }
+  }
+  .gender {
+    p {
+      display: none;
+    }
+  }
+}

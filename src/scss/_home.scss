@@ -1,0 +1,95 @@
+//Home
+
+.home1 {
+  @include bg-image-prop("../images//background.jpg");
+
+  .home_content1 {
+    @include flex-prop(flex-start, center, column);
+    @include h2-p-prop;
+    @include button-prop;
+  }
+  .home_content2 {
+    @include flex-prop(center, center, column);
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.home2 {
+  @include flex-prop(center, center, row);
+  @include bg-image-prop("../images/background2.jpg");
+
+  .home_content1 {
+    @include flex-prop(center, center, row);
+    height: 80vh;
+    img {
+      height: 50%;
+      &:first-child {
+        border: 1.5rem solid #4477ce;
+        transform: translateX(1.2rem) rotateZ(10deg);
+        align-self: flex-start;
+        margin-top: 3rem;
+      }
+      &:last-child {
+        border: 1.5rem solid #fd8d14;
+        transform: rotateZ(10deg);
+        align-self: flex-end;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  .home_content2 {
+    @include flex-prop(flex-start, center, column);
+    height: 80vh;
+    padding: 0 5rem;
+    @include h2-p-prop;
+  }
+}
+
+.home3 {
+  @include bg-image-prop("../images/background3.jpg");
+  background-position: top;
+}
+
+.home4 {
+  @include bg-image-prop("../images/background_books.jpg");
+  .about {
+    background: rgb(0, 0, 0, 0.6);
+    border: 4px solid white;
+    border-radius: 1rem;
+    padding: 4rem 5rem;
+    margin: 4rem 5rem;
+    box-shadow: 2px 4px 7px 3px black;
+    @include h2-p-prop;
+    color: white;
+  }
+}
+
+@media (max-width: 576px) {
+  .home1 .home_content1 h2 {
+    font-size: 2em;
+  }
+
+  .home2 .home_content1 {
+    height: 50vh;
+  }
+
+  .home2 .home_content2 h2 {
+    font-size: 2em;
+  }
+
+  .home4 .about {
+    margin: 1rem 0.5rem;
+    padding: 1rem 0.5rem;
+    h2 {
+      font-size: 2em;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .home2 .home_content2 {
+    height: fit-content;
+  }
+}

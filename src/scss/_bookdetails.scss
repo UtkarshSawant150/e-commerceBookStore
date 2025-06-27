@@ -1,0 +1,48 @@
+.book-details-page {
+  .book-image {
+    @include flex-prop(center, flex-start, column);
+  }
+  .book-detail {
+    div {
+      @include h2-p-prop2;
+    }
+    .book-name {
+      h1 {
+        font-family: "Courgette", cursive;
+        margin-bottom: 0;
+        text-transform: capitalize;
+        font-size: 3.2em;
+      }
+      p {
+        font-size: 1.2em;
+      }
+    }
+    .price {
+      margin-bottom: 1em;
+      h2 {
+        font-size: 1.5em;
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      p {
+        font-size: 1.3em;
+        font-weight: 700;
+        span {
+          color: grey;
+          font-size: 0.8em;
+          text-decoration: line-through;
+          margin-bottom: 1em;
+          font-weight: normal;
+        }
+      }
+      .book-buy-button {
+        @include flex-prop(center, flex-start, row);
+        button {
+          @include button-prop2;
+          font-size: 1em;
+          margin-right: 1em;
+        }
+      }
+    }
+  }
+}

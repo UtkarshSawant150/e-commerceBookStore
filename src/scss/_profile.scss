@@ -1,0 +1,84 @@
+.profile-page {
+  @include flex-prop(center, center, column);
+  min-height: 60vh;
+  width: 100vw;
+  .row {
+    height: 90%;
+    width: 65%;
+  }
+  .profile {
+    width: 100%;
+    h1 {
+      letter-spacing: 0.05em;
+      font-size: 3.5em;
+      padding-bottom: 0.3em;
+      text-align: center;
+      font-family: "Courgette", cursive;
+    }
+    .profile-data {
+      padding: 0 1em;
+      @include flex-prop(center, flex-start, row);
+      div:first-child {
+        width: 60%;
+        height: 100%;
+        p {
+          @include flex-prop(center, flex-start, row);
+          text-transform: capitalize;
+          span:first-child {
+            width: 30%;
+          }
+          span:last-child {
+            font-weight: 500;
+            width: 60%;
+          }
+        }
+      }
+      div:last-child {
+        width: 40%;
+        img {
+          width: 65%;
+        }
+      }
+    }
+    .profile-buttons {
+      @include flex-prop(center, center, row);
+      button {
+        @include button-prop2;
+        margin: 0 0.5em;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    min-height: 0;
+    .row {
+      width: 100%;
+      .profile {
+        h1 {
+          font-size: 2em;
+        }
+        .profile-data {
+          div:first-child {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .profile-page {
+    .profile {
+      .profile-data {
+        div:first-child {
+          p {
+            @include flex-prop(flex-start, center, column);
+          }
+        }
+      }
+    }
+  }
+}

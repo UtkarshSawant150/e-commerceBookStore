@@ -1,0 +1,93 @@
+.books-cart {
+  border-bottom: 1px solid $border-color;
+  width: 100%;
+  .row {
+    @include flex-prop(center, flex-start, row);
+  }
+  .book-image {
+    @include flex-prop(center, center, row);
+    a {
+      @include flex-prop(center, center, row);
+
+      img {
+        width: 75%;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .book-content {
+    @include flex-prop(flex-start, center, column);
+    height: 100%;
+    div:first-child {
+      margin: auto 0;
+      h3 {
+        a {
+          text-transform: capitalize;
+          margin: 0;
+          text-decoration: none;
+          color: black;
+          font-weight: 500;
+          font-size: 0.9em;
+          letter-spacing: 0.05em;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      p {
+        font-size: 1em;
+        letter-spacing: 0.1rem;
+      }
+    }
+    .price {
+      margin: auto 0;
+      h4 {
+        margin: auto 0;
+        letter-spacing: 0.04;
+        font-size: 1.25em;
+      }
+      h5 {
+        margin: auto 0;
+        font-size: 1.1em;
+        color: grey;
+        padding-bottom: 0.5em;
+        text-decoration: line-through;
+      }
+    }
+
+    .books-cart-button {
+      @include flex-prop(center, flex-start, row);
+      .quantity {
+        @include flex-prop(center, center, row);
+        margin: 0;
+        button {
+          color: black;
+          //   font-size: 1.4em;
+          //   padding: 4px 8px;
+          background-color: $border-color;
+          &:disabled {
+            background-color: #e7e5e4;
+          }
+        }
+      }
+      button {
+        @include button-prop2;
+        margin-left: 1em;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    .card-image img {
+      width: 250px;
+      height: 300px;
+    }
+    .card-content {
+      padding: 0 2em;
+    }
+  }
+}

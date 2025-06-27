@@ -1,0 +1,69 @@
+//Navbar
+
+.brand-logo {
+  width: 12em;
+}
+
+#search-books {
+  width: 40%;
+
+  input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    border: 2px solid $navtext;
+    border-right: 0;
+  }
+
+  button {
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    background-color: $navtext;
+    color: white;
+    border: 2px solid $navtext;
+    border-left: 0;
+    padding: 0 1rem;
+  }
+}
+
+.nav_options .nav-item .nav-link {
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  font-size: 1.3em;
+  color: $navtext;
+  &:hover {
+    background-color: $border-color;
+  }
+}
+.dropdown-item {
+  &:hover {
+    background-color: $border-color;
+  }
+}
+
+.active {
+  color: $nav-active !important;
+  border-bottom: 2px solid $navtext;
+  background-color: #f5f3f3;
+}
+
+.main_heading {
+  display: flex;
+}
+
+@media (min-width: 1200px) {
+  #search-books {
+    width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .brand-logo {
+    width: 10em;
+  }
+
+  #search-books {
+    width: 100%;
+  }
+}
